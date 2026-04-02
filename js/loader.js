@@ -1,5 +1,5 @@
 /**
- * GeoAI Africa — Section Loader
+ * GeoAI-Africa — Section Loader
  * Fetches each section's HTML from /sections/<name>/<name>.html and injects it.
  * Dispatches 'sections-loaded' event when all sections are ready.
  */

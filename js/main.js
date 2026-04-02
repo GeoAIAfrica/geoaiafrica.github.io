@@ -1,5 +1,5 @@
 /**
- * GeoAI Africa — Main Site JavaScript
+ * GeoAI-Africa — Main Site JavaScript
  * Handles navigation, animations, scroll effects, and interactivity.
  */
 (function () {

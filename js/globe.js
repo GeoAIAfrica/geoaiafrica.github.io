@@ -1,5 +1,5 @@
 /**
- * GeoAI Africa — 3D Rotating Earth Globe
+ * GeoAI-Africa — 3D Rotating Earth Globe
  * Built with Three.js — shows a wireframe/dotted Earth with Africa highlighted.
  */
 
