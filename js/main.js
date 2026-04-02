@@ -141,13 +141,14 @@
         const container = document.getElementById('particles');
         if (!container) return;
 
-        for (let i = 0; i < 25; i++) {
+        const count = window.innerWidth <= 768 ? 12 : 25;
+        for (let i = 0; i < count; i++) {
             const p = document.createElement('div');
             p.style.cssText = `
                 position:absolute;
                 width:${1 + Math.random() * 3}px;
                 height:${1 + Math.random() * 3}px;
-                background:rgba(91,154,139,${0.12 + Math.random() * 0.20});
+                background:rgba(201,107,32,${0.12 + Math.random() * 0.20});
                 border-radius:50%;
                 left:${Math.random() * 100}%;
                 top:${Math.random() * 100}%;

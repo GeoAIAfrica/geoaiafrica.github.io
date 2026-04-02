@@ -1,34 +1,34 @@
 /* ========================================
-   GeoAI Africa — Light Sage Theme
-   Cohesive light palette with sage/mint tones
+   GeoAI Africa — Dark Orange Theme
+   Cohesive light palette with warm orange tones
    ======================================== */
 
 /* --- CSS Variables --- */
 :root {
-    --primary: #5B9A8B;
-    --primary-dark: #4A8578;
-    --primary-light: #A8D5C3;
-    --primary-lighter: #D4EDE4;
-    --secondary: #2D3B36;
-    --accent: #7EB8A8;
-    --accent-light: #B8DDD0;
-    --bg-light: #FAFBF9;
-    --bg-off: #F3F6F2;
-    --bg-hero: #EEF3EE;
-    --bg-hero-darker: #E5ECE5;
+    --primary: #C96B20;
+    --primary-dark: #A85A1A;
+    --primary-light: #E8A96A;
+    --primary-lighter: #F5D4B0;
+    --secondary: #3B2D1E;
+    --accent: #D48A4C;
+    --accent-light: #EBBF94;
+    --bg-light: #FBFAF8;
+    --bg-off: #F6F3EF;
+    --bg-hero: #F3EDE6;
+    --bg-hero-darker: #ECE3D8;
     --bg-card: #ffffff;
-    --bg-card-hover: #F5FAF7;
-    --bg-section-alt: #F0F4EE;
-    --text-primary: #2D3B36;
-    --text-secondary: #4D5F57;
-    --text-muted: #7E9189;
-    --text-on-dark: #2D3B36;
-    --text-secondary-dark: #4D5F57;
-    --border: rgba(91, 154, 139, 0.12);
-    --border-hover: rgba(91, 154, 139, 0.35);
-    --shadow: 0 4px 24px rgba(91, 154, 139, 0.08);
-    --shadow-hover: 0 8px 32px rgba(91, 154, 139, 0.14);
-    --shadow-glow: 0 0 40px rgba(91, 154, 139, 0.10);
+    --bg-card-hover: #FAF6F1;
+    --bg-section-alt: #F4EFE8;
+    --text-primary: #3B2D1E;
+    --text-secondary: #5F4D3A;
+    --text-muted: #917E6B;
+    --text-on-dark: #3B2D1E;
+    --text-secondary-dark: #5F4D3A;
+    --border: rgba(201, 107, 32, 0.12);
+    --border-hover: rgba(201, 107, 32, 0.35);
+    --shadow: 0 4px 24px rgba(201, 107, 32, 0.08);
+    --shadow-hover: 0 8px 32px rgba(201, 107, 32, 0.14);
+    --shadow-glow: 0 0 40px rgba(201, 107, 32, 0.10);
     --radius: 12px;
     --radius-lg: 20px;
     --radius-xl: 28px;
@@ -101,7 +101,7 @@ img {
 .loader-ring {
     width: 60px;
     height: 60px;
-    border: 3px solid rgba(91, 154, 139, 0.15);
+    border: 3px solid rgba(201, 107, 32, 0.15);
     border-top-color: var(--primary);
     border-radius: 50%;
     animation: spin 1s linear infinite;
@@ -133,12 +133,12 @@ img {
 }
 
 .navbar.scrolled {
-    background: rgba(250, 251, 249, 0.95);
+    background: rgba(251, 250, 248, 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
     padding: 6px 0;
-    box-shadow: 0 2px 16px rgba(91, 154, 139, 0.06);
+    box-shadow: 0 2px 16px rgba(201, 107, 32, 0.06);
 }
 
 .nav-container {
@@ -191,7 +191,7 @@ img {
 .nav-link:hover,
 .nav-link.active {
     color: var(--primary-dark);
-    background: rgba(91, 154, 139, 0.08);
+    background: rgba(201, 107, 32, 0.08);
 }
 
 /* After scroll, nav links stay consistent */
@@ -202,7 +202,7 @@ img {
 .navbar.scrolled .nav-link:hover,
 .navbar.scrolled .nav-link.active {
     color: var(--primary-dark);
-    background: rgba(91, 154, 139, 0.08);
+    background: rgba(201, 107, 32, 0.08);
 }
 
 .nav-link.nav-cta {
@@ -256,7 +256,7 @@ img {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: linear-gradient(160deg, #EEF3EE 0%, #E2EDE6 30%, #D8E8DF 60%, #E5ECE5 100%);
+    background: linear-gradient(160deg, #F3EDE6 0%, #EDE3D8 30%, #E5D8CB 60%, #ECE3D8 100%);
 }
 
 #globe-container {
@@ -270,9 +270,9 @@ img {
     inset: 0;
     z-index: 2;
     background:
-        radial-gradient(ellipse at 30% 50%, rgba(91, 154, 139, 0.08) 0%, transparent 60%),
-        radial-gradient(ellipse at 70% 50%, rgba(126, 184, 168, 0.06) 0%, transparent 60%),
-        linear-gradient(180deg, rgba(238, 243, 238, 0.2) 0%, rgba(238, 243, 238, 0.4) 50%, rgba(238, 243, 238, 0.85) 100%);
+        radial-gradient(ellipse at 30% 50%, rgba(201, 107, 32, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 50%, rgba(212, 138, 76, 0.06) 0%, transparent 60%),
+        linear-gradient(180deg, rgba(243, 237, 230, 0.2) 0%, rgba(243, 237, 230, 0.4) 50%, rgba(243, 237, 230, 0.85) 100%);
 }
 
 .hero-particles {
@@ -297,8 +297,8 @@ img {
     align-items: center;
     gap: 8px;
     padding: 8px 20px;
-    background: rgba(91, 154, 139, 0.10);
-    border: 1px solid rgba(91, 154, 139, 0.20);
+    background: rgba(201, 107, 32, 0.10);
+    border: 1px solid rgba(201, 107, 32, 0.20);
     border-radius: 100px;
     font-size: 0.85rem;
     font-weight: 500;
@@ -387,23 +387,23 @@ img {
 .btn-primary {
     background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     color: #fff;
-    box-shadow: 0 4px 20px rgba(91, 154, 139, 0.25);
+    box-shadow: 0 4px 20px rgba(201, 107, 32, 0.25);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(91, 154, 139, 0.35);
+    box-shadow: 0 8px 30px rgba(201, 107, 32, 0.35);
 }
 
 .btn-secondary {
-    background: rgba(91, 154, 139, 0.08);
+    background: rgba(201, 107, 32, 0.08);
     color: var(--text-primary);
-    border: 1px solid rgba(91, 154, 139, 0.20);
+    border: 1px solid rgba(201, 107, 32, 0.20);
 }
 
 .btn-secondary:hover {
-    background: rgba(91, 154, 139, 0.14);
-    border-color: rgba(91, 154, 139, 0.30);
+    background: rgba(201, 107, 32, 0.14);
+    border-color: rgba(201, 107, 32, 0.30);
     transform: translateY(-2px);
 }
 
@@ -414,12 +414,12 @@ img {
 
 /* Light-section button overrides */
 .section:not(.hero) .btn-secondary {
-    background: rgba(91, 154, 139, 0.06);
+    background: rgba(201, 107, 32, 0.06);
     color: var(--text-primary);
     border: 1px solid var(--border);
 }
 .section:not(.hero) .btn-secondary:hover {
-    background: rgba(91, 154, 139, 0.10);
+    background: rgba(201, 107, 32, 0.10);
     border-color: var(--border-hover);
 }
 
@@ -455,7 +455,7 @@ img {
 .stat-divider {
     width: 1px;
     height: 40px;
-    background: rgba(91, 154, 139, 0.20);
+    background: rgba(201, 107, 32, 0.20);
 }
 
 /* Scroll Indicator */
@@ -525,8 +525,8 @@ img {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(circle at 20% 30%, rgba(91, 154, 139, 0.04) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(126, 184, 168, 0.03) 0%, transparent 50%);
+        radial-gradient(circle at 20% 30%, rgba(201, 107, 32, 0.04) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(212, 138, 76, 0.03) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -591,7 +591,7 @@ img {
 .mission-icon-wrapper {
     width: 64px;
     height: 64px;
-    background: linear-gradient(135deg, rgba(91, 154, 139, 0.15), rgba(126, 184, 168, 0.12));
+    background: linear-gradient(135deg, rgba(201, 107, 32, 0.15), rgba(212, 138, 76, 0.12));
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -660,7 +660,7 @@ img {
 .pillar-icon {
     width: 48px;
     height: 48px;
-    background: linear-gradient(135deg, rgba(91, 154, 139, 0.15), rgba(126, 184, 168, 0.10));
+    background: linear-gradient(135deg, rgba(201, 107, 32, 0.15), rgba(212, 138, 76, 0.10));
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -748,7 +748,7 @@ img {
     top: 20px;
     right: 20px;
     font-size: 1.2rem;
-    color: rgba(91, 154, 139, 0.18);
+    color: rgba(201, 107, 32, 0.18);
 }
 
 /* Engage Section */
@@ -791,7 +791,7 @@ img {
     width: 52px;
     height: 52px;
     margin: 0 auto 16px;
-    background: linear-gradient(135deg, rgba(91, 154, 139, 0.15), rgba(126, 184, 168, 0.10));
+    background: linear-gradient(135deg, rgba(201, 107, 32, 0.15), rgba(212, 138, 76, 0.10));
     border-radius: 14px;
     display: flex;
     align-items: center;
@@ -946,7 +946,7 @@ img {
 .team-links a {
     width: 34px;
     height: 34px;
-    background: rgba(91, 154, 139, 0.06);
+    background: rgba(201, 107, 32, 0.06);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -957,7 +957,7 @@ img {
 }
 
 .team-links a:hover {
-    background: rgba(91, 154, 139, 0.15);
+    background: rgba(201, 107, 32, 0.15);
     color: var(--primary-dark);
 }
 
@@ -1006,7 +1006,7 @@ img {
     background: var(--primary);
     border-radius: 50%;
     border: 3px solid var(--bg-light);
-    box-shadow: 0 0 0 3px rgba(91, 154, 139, 0.25);
+    box-shadow: 0 0 0 3px rgba(201, 107, 32, 0.25);
     position: relative;
     z-index: 1;
 }
@@ -1038,7 +1038,7 @@ img {
     color: var(--primary-dark);
     text-transform: uppercase;
     letter-spacing: 1px;
-    background: rgba(91, 154, 139, 0.10);
+    background: rgba(201, 107, 32, 0.10);
     padding: 4px 12px;
     border-radius: 6px;
 }
@@ -1137,7 +1137,7 @@ img {
 .resource-icon {
     width: 48px;
     height: 48px;
-    background: linear-gradient(135deg, rgba(91, 154, 139, 0.15), rgba(126, 184, 168, 0.10));
+    background: linear-gradient(135deg, rgba(201, 107, 32, 0.15), rgba(212, 138, 76, 0.10));
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -1216,7 +1216,7 @@ img {
     width: 44px;
     height: 44px;
     flex-shrink: 0;
-    background: linear-gradient(135deg, rgba(91, 154, 139, 0.15), rgba(126, 184, 168, 0.10));
+    background: linear-gradient(135deg, rgba(201, 107, 32, 0.15), rgba(212, 138, 76, 0.10));
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -1252,8 +1252,8 @@ img {
 
 /* CTA Card */
 .cta-card {
-    background: linear-gradient(135deg, rgba(91, 154, 139, 0.08), rgba(168, 213, 195, 0.10));
-    border: 1px solid rgba(91, 154, 139, 0.18);
+    background: linear-gradient(135deg, rgba(201, 107, 32, 0.08), rgba(232, 169, 106, 0.10));
+    border: 1px solid rgba(201, 107, 32, 0.18);
     border-radius: var(--radius-lg);
     padding: 48px 40px;
     text-align: center;
@@ -1268,7 +1268,7 @@ img {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(91, 154, 139, 0.04) 0%, transparent 60%);
+    background: radial-gradient(circle, rgba(201, 107, 32, 0.04) 0%, transparent 60%);
     animation: rotate-slow 20s linear infinite;
 }
 
@@ -1313,10 +1313,10 @@ img {
 
 /* --- Footer — soft sage dark --- */
 .footer {
-    background: #2D3B36;
-    border-top: 1px solid rgba(91, 154, 139, 0.15);
+    background: #3B2D1E;
+    border-top: 1px solid rgba(201, 107, 32, 0.15);
     padding: 64px 0 32px;
-    color: #E8F0EC;
+    color: #F0E8E0;
 }
 
 .footer-content {
@@ -1339,7 +1339,7 @@ img {
 
 .footer-brand p {
     font-size: 0.9rem;
-    color: rgba(232, 240, 236, 0.65);
+    color: rgba(240, 232, 224, 0.65);
     line-height: 1.6;
     max-width: 360px;
 }
@@ -1350,13 +1350,13 @@ img {
     font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: 16px;
-    color: #E8F0EC;
+    color: #F0E8E0;
 }
 
 .footer-links a {
     display: block;
     font-size: 0.85rem;
-    color: rgba(232, 240, 236, 0.55);
+    color: rgba(240, 232, 224, 0.55);
     padding: 4px 0;
     transition: var(--transition);
 }
@@ -1374,33 +1374,33 @@ img {
 .social-links a {
     width: 40px;
     height: 40px;
-    background: rgba(91, 154, 139, 0.12);
-    border: 1px solid rgba(91, 154, 139, 0.18);
+    background: rgba(201, 107, 32, 0.12);
+    border: 1px solid rgba(201, 107, 32, 0.18);
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(232, 240, 236, 0.55);
+    color: rgba(240, 232, 224, 0.55);
     font-size: 1rem;
     transition: var(--transition);
 }
 
 .social-links a:hover {
-    background: rgba(91, 154, 139, 0.25);
-    border-color: rgba(91, 154, 139, 0.40);
+    background: rgba(201, 107, 32, 0.25);
+    border-color: rgba(201, 107, 32, 0.40);
     color: var(--primary-light);
     transform: translateY(-2px);
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(91, 154, 139, 0.12);
+    border-top: 1px solid rgba(201, 107, 32, 0.12);
     padding-top: 24px;
     text-align: center;
 }
 
 .footer-bottom p {
     font-size: 0.8rem;
-    color: rgba(232, 240, 236, 0.50);
+    color: rgba(240, 232, 224, 0.50);
 }
 
 /* --- Reveal Animations --- */
@@ -1416,6 +1416,7 @@ img {
 }
 
 /* --- Responsive --- */
+
 @media (max-width: 1024px) {
     .pillars-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1440,6 +1441,14 @@ img {
     .footer-content {
         grid-template-columns: 1fr 1fr;
     }
+
+    .footer-logo-img {
+        height: 180px;
+    }
+
+    .loader-logo {
+        width: 360px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1459,7 +1468,7 @@ img {
         gap: 4px;
         transition: right 0.3s ease;
         border-left: 1px solid var(--border);
-        box-shadow: -4px 0 24px rgba(91, 154, 139, 0.08);
+        box-shadow: -4px 0 24px rgba(201, 107, 32, 0.08);
     }
 
     .nav-menu.active {
@@ -1473,7 +1482,7 @@ img {
     .nav-menu .nav-link:hover,
     .nav-menu .nav-link.active {
         color: var(--primary-dark);
-        background: rgba(91, 154, 139, 0.08);
+        background: rgba(201, 107, 32, 0.08);
     }
 
     .nav-link {
@@ -1492,6 +1501,18 @@ img {
         padding: 72px 0;
     }
 
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
     .pillars-grid {
         grid-template-columns: 1fr;
     }
@@ -1502,6 +1523,7 @@ img {
 
     .team-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
     }
 
     .engage-grid {
@@ -1510,6 +1532,10 @@ img {
 
     .resources-grid {
         grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        padding-top: 60px;
     }
 
     .hero-stats {
@@ -1525,6 +1551,10 @@ img {
         gap: 32px;
     }
 
+    .footer-logo-img {
+        height: 140px;
+    }
+
     .timeline-line {
         left: 12px;
     }
@@ -1536,20 +1566,81 @@ img {
     .event-item {
         gap: 16px;
     }
+
+    .event-card {
+        padding: 20px;
+    }
+
+    .loader-logo {
+        width: 280px;
+    }
+
+    .mission-statement {
+        padding: 28px 20px;
+    }
+
+    .pillar-card {
+        padding: 24px;
+    }
+
+    .objective-card {
+        padding: 24px;
+        gap: 16px;
+    }
+
+    .objective-number {
+        font-size: 2rem;
+    }
+
+    .engage-title {
+        font-size: 1.4rem;
+    }
+
+    .engage-card {
+        padding: 24px;
+    }
+
+    .cta-card {
+        padding: 36px 24px;
+    }
+
+    .contact-card {
+        padding: 16px 20px;
+    }
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .section {
+        padding: 56px 0;
+    }
+
     .hero-title {
         font-size: 2rem;
     }
 
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .hero-badge {
+        font-size: 0.78rem;
+        padding: 6px 14px;
+        margin-bottom: 24px;
+    }
+
+    .hero-content {
+        padding-top: 48px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
     .hero-actions {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
     }
 
     .btn {
@@ -1557,8 +1648,42 @@ img {
         justify-content: center;
     }
 
+    .btn-lg {
+        padding: 14px 24px;
+        font-size: 0.95rem;
+    }
+
     .team-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .team-card-inner {
+        padding: 20px 12px;
+    }
+
+    .avatar-img,
+    .avatar-placeholder {
+        width: 60px;
+        height: 60px;
+    }
+
+    .team-info h3 {
+        font-size: 0.85rem;
+    }
+
+    .team-role {
+        font-size: 0.72rem;
+    }
+
+    .team-org {
+        font-size: 0.68rem;
+    }
+
+    .team-links a {
+        width: 30px;
+        height: 30px;
+        font-size: 0.75rem;
     }
 
     .hero-stats {
@@ -1571,7 +1696,132 @@ img {
         height: 1px;
     }
 
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .section-header {
+        margin-bottom: 32px;
+    }
+
+    .objective-card {
+        padding: 20px;
+        gap: 12px;
+    }
+
+    .objective-number {
+        font-size: 1.7rem;
+    }
+
+    .objective-content h3 {
+        font-size: 1rem;
+    }
+
+    .objective-icon {
+        display: none;
+    }
+
+    .pillar-card {
+        padding: 20px;
+    }
+
+    .resource-card {
+        padding: 24px;
+    }
+
+    .event-card {
+        padding: 16px;
+    }
+
+    .event-card h3 {
+        font-size: 1rem;
+    }
+
     .cta-card {
-        padding: 32px 20px;
+        padding: 28px 16px;
+    }
+
+    .cta-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .cta-card p {
+        font-size: 0.88rem;
+    }
+
+    .footer {
+        padding: 48px 0 24px;
+    }
+
+    .footer-logo-img {
+        height: 100px;
+    }
+
+    .footer-brand p {
+        font-size: 0.82rem;
+    }
+
+    .footer-bottom p {
+        font-size: 0.72rem;
+    }
+
+    .loader-logo {
+        width: 200px;
+    }
+
+    .loader-ring {
+        width: 44px;
+        height: 44px;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    .nav-logo-img {
+        height: 44px;
+    }
+
+    .navbar.scrolled .nav-logo-img {
+        height: 36px;
+    }
+
+    .engage-title {
+        font-size: 1.2rem;
+    }
+
+    .team-group-title {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.7rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.88rem;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-number {
+        font-size: 1.4rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 0.88rem;
     }
 }

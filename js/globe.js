@@ -13,9 +13,10 @@
     const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
     camera.position.z = 3.2;
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    const isMobile = window.innerWidth <= 768;
+    const renderer = new THREE.WebGLRenderer({ antialias: !isMobile, alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1.5 : 2));
     renderer.setClearColor(0x000000, 0);
     container.appendChild(renderer.domElement);
 
@@ -26,7 +27,7 @@
     // --- Main sphere (wireframe) ---
     const sphereGeometry = new THREE.SphereGeometry(1, 64, 64);
     const sphereMaterial = new THREE.MeshBasicMaterial({
-        color: 0x5B9A8B,
+        color: 0xC96B20,
         wireframe: true,
         transparent: true,
         opacity: 0.06
@@ -37,7 +38,7 @@
     // --- Glow sphere ---
     const glowGeometry = new THREE.SphereGeometry(1.02, 64, 64);
     const glowMaterial = new THREE.MeshBasicMaterial({
-        color: 0x5B9A8B,
+        color: 0xC96B20,
         transparent: true,
         opacity: 0.04,
         side: THREE.BackSide
@@ -59,7 +60,7 @@
             varying vec3 vNormal;
             void main() {
                 float intensity = pow(0.6 - dot(vNormal, vec3(0.0, 0.0, 1.0)), 2.0);
-                gl_FragColor = vec4(0.357, 0.604, 0.545, 1.0) * intensity * 0.3;
+                gl_FragColor = vec4(0.788, 0.420, 0.125, 1.0) * intensity * 0.3;
             }
         `,
         blending: THREE.NormalBlending,
@@ -71,14 +72,14 @@
 
     // --- Dot grid (latitude/longitude points) ---
     function createDotGrid() {
-        const dotCount = 2000;
+        const dotCount = isMobile ? 1000 : 2000;
         const positions = new Float32Array(dotCount * 3);
         const colors = new Float32Array(dotCount * 3);
         const sizes = new Float32Array(dotCount);
 
-        const primaryColor = new THREE.Color(0x5B9A8B);
-        const secondaryColor = new THREE.Color(0x7EB8A8);
-        const defaultColor = new THREE.Color(0xB0C4BC);
+        const primaryColor = new THREE.Color(0xC96B20);
+        const secondaryColor = new THREE.Color(0xD48A4C);
+        const defaultColor = new THREE.Color(0xC4B0A0);
 
         for (let i = 0; i < dotCount; i++) {
             // Fibonacci sphere distribution
@@ -155,7 +156,7 @@
     // --- Latitude/Longitude grid lines ---
     function createGridLines() {
         const lineMaterial = new THREE.LineBasicMaterial({
-            color: 0x5B9A8B,
+            color: 0xC96B20,
             transparent: true,
             opacity: 0.08,
         });
@@ -240,12 +241,12 @@
 
     // African city connections
     const arcs = [
-        createArc(6.5, 3.4, 30, 31.2, 0x5B9A8B),    // Lagos to Cairo
-        createArc(-1.3, 36.8, 33.9, -6.9, 0x7EB8A8),  // Nairobi to Rabat
-        createArc(-33.9, 18.4, 9, 7.5, 0x5B9A8B),      // Cape Town to Abuja
-        createArc(5.6, -0.2, -4.3, 15.3, 0xA8D5C3),    // Accra to Kinshasa
-        createArc(15.5, 32.5, -6.2, 35.7, 0x7EB8A8),   // Khartoum to Dar es Salaam
-        createArc(0.3, 32.6, 14.7, -17.5, 0x5B9A8B),   // Kampala to Dakar
+        createArc(6.5, 3.4, 30, 31.2, 0xC96B20),    // Lagos to Cairo
+        createArc(-1.3, 36.8, 33.9, -6.9, 0xD48A4C),  // Nairobi to Rabat
+        createArc(-33.9, 18.4, 9, 7.5, 0xC96B20),      // Cape Town to Abuja
+        createArc(5.6, -0.2, -4.3, 15.3, 0xE8A96A),    // Accra to Kinshasa
+        createArc(15.5, 32.5, -6.2, 35.7, 0xD48A4C),   // Khartoum to Dar es Salaam
+        createArc(0.3, 32.6, 14.7, -17.5, 0xC96B20),   // Kampala to Dakar
     ];
 
     arcs.forEach(arc => globeGroup.add(arc));
@@ -271,15 +272,15 @@
     }
 
     const cities = [
-        { lat: 6.5, lon: 3.4, color: 0x5B9A8B },     // Lagos
-        { lat: 30, lon: 31.2, color: 0x7EB8A8 },      // Cairo
-        { lat: -1.3, lon: 36.8, color: 0x5B9A8B },    // Nairobi
-        { lat: -33.9, lon: 18.4, color: 0xA8D5C3 },   // Cape Town
-        { lat: 9, lon: 7.5, color: 0x7EB8A8 },        // Abuja
-        { lat: 5.6, lon: -0.2, color: 0x5B9A8B },     // Accra
-        { lat: 14.7, lon: -17.5, color: 0x7EB8A8 },   // Dakar
-        { lat: 33.9, lon: -6.9, color: 0x5B9A8B },    // Rabat
-        { lat: 0.3, lon: 32.6, color: 0xA8D5C3 },     // Kampala
+        { lat: 6.5, lon: 3.4, color: 0xC96B20 },     // Lagos
+        { lat: 30, lon: 31.2, color: 0xD48A4C },      // Cairo
+        { lat: -1.3, lon: 36.8, color: 0xC96B20 },    // Nairobi
+        { lat: -33.9, lon: 18.4, color: 0xE8A96A },   // Cape Town
+        { lat: 9, lon: 7.5, color: 0xD48A4C },        // Abuja
+        { lat: 5.6, lon: -0.2, color: 0xC96B20 },     // Accra
+        { lat: 14.7, lon: -17.5, color: 0xD48A4C },   // Dakar
+        { lat: 33.9, lon: -6.9, color: 0xC96B20 },    // Rabat
+        { lat: 0.3, lon: 32.6, color: 0xE8A96A },     // Kampala
     ];
 
     cities.forEach(c => {
@@ -323,7 +324,7 @@
                     float d = length(gl_PointCoord - vec2(0.5));
                     if (d > 0.5) discard;
                     float alpha = (1.0 - smoothstep(0.2, 0.5, d)) * 0.3;
-                    gl_FragColor = vec4(0.357, 0.604, 0.545, alpha);
+                    gl_FragColor = vec4(0.788, 0.420, 0.125, alpha);
                 }
             `,
             transparent: true,
@@ -405,7 +406,7 @@
 
         const miniSphere = new THREE.Mesh(
             new THREE.SphereGeometry(0.8, 32, 32),
-            new THREE.MeshBasicMaterial({ color: 0x5B9A8B, wireframe: true, transparent: true, opacity: 0.10 })
+            new THREE.MeshBasicMaterial({ color: 0xC96B20, wireframe: true, transparent: true, opacity: 0.10 })
         );
         miniGroup.add(miniSphere);
 
@@ -414,8 +415,8 @@
         const miniPos = new Float32Array(miniDotCount * 3);
         const miniColors = new Float32Array(miniDotCount * 3);
         const miniSizes = new Float32Array(miniDotCount);
-        const pColor = new THREE.Color(0x5B9A8B);
-        const dColor = new THREE.Color(0xB0C4BC);
+        const pColor = new THREE.Color(0xC96B20);
+        const dColor = new THREE.Color(0xC4B0A0);
 
         for (let i = 0; i < miniDotCount; i++) {
             const phi = Math.acos(1 - 2 * (i + 0.5) / miniDotCount);
