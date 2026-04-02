@@ -961,6 +961,208 @@ img {
     color: var(--primary-dark);
 }
 
+/* --- News Section --- */
+.news-section {
+    background: var(--bg-light);
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 24px;
+}
+
+.news-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+}
+
+.news-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.news-card:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.news-card:hover::before {
+    transform: scaleX(1);
+}
+
+.news-card-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.news-date-badge,
+.news-source-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 12px;
+    border-radius: 6px;
+}
+
+.news-date-badge {
+    background: rgba(201, 107, 32, 0.10);
+    color: var(--primary-dark);
+}
+
+.news-source-badge {
+    background: var(--bg-off);
+    color: var(--text-muted);
+}
+
+.news-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.news-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.news-read-more {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition);
+}
+
+.news-card:hover .news-read-more {
+    gap: 10px;
+}
+
+.news-read-more i {
+    font-size: 0.7rem;
+}
+
+/* --- News Full Page Styles --- */
+.news-article {
+    max-width: 800px;
+    margin: 0 auto 64px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 48px;
+    box-shadow: var(--shadow);
+}
+
+.news-article-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.news-date,
+.news-source {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.news-date i,
+.news-source i {
+    font-size: 0.7rem;
+    color: var(--primary);
+}
+
+.news-article-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.news-article-subtitle {
+    font-size: 1.1rem;
+    color: var(--primary-dark);
+    font-weight: 500;
+    margin-bottom: 32px;
+}
+
+.news-article-body p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.news-article-body strong {
+    color: var(--text-primary);
+}
+
+.news-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.news-highlights li {
+    padding: 20px 24px;
+    background: var(--bg-off);
+    border-left: 3px solid var(--primary);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.news-highlights li strong {
+    color: var(--text-primary);
+}
+
+.news-article-cta {
+    margin-top: 36px;
+    text-align: center;
+}
+
 /* --- Events Section --- */
 .events-section {
     background: var(--bg-light);
@@ -1607,11 +1809,44 @@ img {
     .contact-card {
         padding: 16px 20px;
     }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-card {
+        padding: 24px;
+    }
+
+    .news-article {
+        padding: 28px 20px;
+    }
 }
 
 @media (max-width: 480px) {
     .container {
         padding: 0 16px;
+    }
+
+    .news-card h3 {
+        font-size: 1rem;
+    }
+
+    .news-card p {
+        font-size: 0.85rem;
+    }
+
+    .news-article {
+        padding: 24px 16px;
+    }
+
+    .news-article-title {
+        font-size: 1.3rem;
+    }
+
+    .news-highlights li {
+        padding: 16px;
+        font-size: 0.88rem;
     }
 
     .section {

@@ -90,7 +90,7 @@
     // --- Scroll reveal animations ---
     function initRevealAnimations() {
         const revealElements = document.querySelectorAll(
-            '.pillar-card, .objective-card, .engage-card, .team-card, .event-item, .resource-card, .contact-card, .mission-statement'
+            '.pillar-card, .objective-card, .engage-card, .team-card, .event-item, .resource-card, .contact-card, .mission-statement, .news-card'
         );
         revealElements.forEach(el => el.classList.add('reveal'));
 
