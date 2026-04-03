@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — GeoAI-Africa</title>
+    <meta name="description" content="Community projects and large-scale initiatives led by GeoAI-Africa and its partners.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="GeoAI-Africa" class="nav-logo-img">
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#mission" class="nav-link">Mission</a></li>
+                <li><a href="index.html#impact" class="nav-link">Impact</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="index.html#team" class="nav-link">Team</a></li>
+                <li><a href="index.html#events" class="nav-link">Events</a></li>
+                <li><a href="news.html" class="nav-link">News</a></li>
+                <li><a href="index.html#resources" class="nav-link">Resources</a></li>
+                <li><a href="index.html#contact" class="nav-link nav-cta">Join Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main style="padding-top: 100px;">
+        <section class="section projects-section">
+            <div class="section-bg-pattern"></div>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-diagram-project"></i> Our Work</span>
+                    <h2 class="section-title">Community <span class="gradient-text">Projects</span></h2>
+                    <p class="section-subtitle">
+                        Large-scale initiatives led by the GeoAI-Africa community
+                        and its partners to advance geospatial AI across the continent.
+                    </p>
+                </div>
+
+                <!-- uGAP Project -->
+                <div class="project-card" id="ugap">
+                    <div class="project-card-header">
+                        <div class="project-icon"><i class="fas fa-layer-group"></i></div>
+                        <div>
+                            <h3 class="project-title">uGAP &mdash; Unified Access to Geospatial Data and AI Pipelines</h3>
+                            <span class="project-status"><span class="status-dot"></span> Active &mdash; Proof of Concept</span>
+                        </div>
+                    </div>
+
+                    <div class="project-body">
+                        <div class="project-description">
+                            <p>
+                                Climate science in the Global South is severely hampered by label
+                                fragmentation. Geospatial labels critical for AI &mdash; crop types,
+                                land cover, building footprints, field polygons &mdash; exist across
+                                dozens of incompatible repositories, formats, and metadata standards.
+                            </p>
+                            <p>
+                                <strong>uGAP</strong> is envisioned as an open-source platform that will unify scattered
+                                geospatial labels from the Global South into AI-ready pipelines. It
+                                comprises: <em>(1)</em>&nbsp;a label hub aggregating and standardizing
+                                multi-source labels using Croissant/GeoCroissant metadata standards;
+                                <em>(2)</em>&nbsp;cloud-optimized streaming in formats such as
+                                GeoParquet, COG, and Zarr; and <em>(3)</em>&nbsp;ready-to-use
+                                pipelines for fine-tuning geospatial foundation models on
+                                previously excluded Global South observations.
+                            </p>
+                            <p>
+                                The project targets climate resilience &amp; environmental science,
+                                food &amp; agriculture, and climate &amp; weather &mdash; with pilot
+                                deployments in <strong>Benin, Kenya, South Africa, Nigeria,</strong>
+                                and <strong>Senegal</strong>.
+                            </p>
+                        </div>
+
+                        <div class="project-meta">
+                            <div class="meta-block">
+                                <h4>Focus Areas</h4>
+                                <div class="tag-list">
+                                    <span class="tag">Climate Resilience</span>
+                                    <span class="tag">Food &amp; Agriculture</span>
+                                    <span class="tag">Climate &amp; Weather</span>
+                                </div>
+                            </div>
+                            <div class="meta-block">
+                                <h4>Open-Source Outputs</h4>
+                                <div class="tag-list">
+                                    <span class="tag">Curated Datasets</span>
+                                    <span class="tag">Software &amp; Tools</span>
+                                    <span class="tag">AI Models</span>
+                                    <span class="tag">Publications</span>
+                                </div>
+                            </div>
+                            <div class="meta-block">
+                                <h4>Lead Organization</h4>
+                                <p><a href="https://ai4innov.com" target="_blank" rel="noopener">Ai4Innov</a></p>
+                            </div>
+                        </div>
+
+                        <div class="project-partners">
+                            <h4>Partners</h4>
+                            <div class="partners-grid">
+                                <a href="https://www.geoai-africa.com" target="_blank" rel="noopener" class="partner-item">
+                                    <div class="partner-icon"><i class="fas fa-globe-africa"></i></div>
+                                    <div class="partner-info">
+                                        <strong>GeoAI-Africa</strong>
+                                        <span>Community infrastructure, practitioner network mobilization, data curation, workshops, and multilingual documentation.</span>
+                                    </div>
+                                </a>
+                                <a href="https://www.earthdata.nasa.gov/about/impact" target="_blank" rel="noopener" class="partner-item">
+                                    <div class="partner-icon"><i class="fas fa-satellite"></i></div>
+                                    <div class="partner-info">
+                                        <strong>NASA IMPACT</strong>
+                                        <span>Technical guidance on Earth observation data standards, STAC catalog best practices, and scalable geospatial data infrastructure.</span>
+                                    </div>
+                                </a>
+                                <a href="https://www.uct.ac.za" target="_blank" rel="noopener" class="partner-item">
+                                    <div class="partner-icon"><i class="fas fa-university"></i></div>
+                                    <div class="partner-info">
+                                        <strong>University of Cape Town</strong>
+                                        <span>Scientific validation, climate science expertise, and co-supervision of postdoctoral research on uGAP.</span>
+                                    </div>
+                                </a>
+                                <a href="https://africlimate.ai" target="_blank" rel="noopener" class="partner-item">
+                                    <div class="partner-icon"><i class="fas fa-cloud-sun"></i></div>
+                                    <div class="partner-info">
+                                        <strong>AfriNet</strong>
+                                        <span>Network of low-cost weather stations across Africa providing high-frequency ground-truth meteorological observations.</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="logo.png" alt="GeoAI-Africa" class="footer-logo-img">
+                    </a>
+                    <p>Geospatial AI for a Sustainable Future in Africa. Uniting researchers, practitioners, and policymakers across the continent.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="index.html#mission">Mission</a>
+                    <a href="index.html#impact">Impact</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="index.html#team">Team</a>
+                    <a href="index.html#events">Events</a>
+                    <a href="news.html">News</a>
+                    <a href="index.html#resources">Resources</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://twitter.com/GeoAIAfrica" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/geoai-africa/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/GeoAIAfrica" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GeoAI-Africa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    // Mobile nav toggle for projects page
+    (function() {
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        if (!navToggle || !navMenu) return;
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        navMenu.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    })();
+    </script>
+</body>
+</html>
